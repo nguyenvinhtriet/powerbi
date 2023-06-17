@@ -1,0 +1,6 @@
+{
+  "name": "Total confirmed cases",
+  "expression": "SUM('COVID'[Daily cases])",
+  "formatString": "#,0",
+  "lineageTag": "6703243b-7855-43b5-9d17-9cc2774e30a5"
+}

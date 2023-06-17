@@ -1,0 +1,32 @@
+{
+  "type": "calculated",
+  "name": "Daily deaths",
+  "dataType": "int64",
+  "isDataTypeInferred": true,
+  "expression": [
+    "",
+    "VAR __CountyName = 'COVID'[County Name]",
+    "VAR __State = 'COVID'[StateFIPS]",
+    "VAR __Yesterday =  DATEADD(COVID[Date],-1,DAY)",
+    "VAR __TodaysDeaths = 'COVID'[Deaths]",
+    "",
+    "RETURN  __TodaysDeaths - CALCULATE(",
+    "    SUM('COVID'[Deaths]) , ",
+    "    FILTER(",
+    "        COVID, ",
+    "        COVID[Date] = __Yesterday &&",
+    "        COVID[County Name] = __CountyName &&",
+    "        COVID[StateFIPS] = __State",
+    "    )",
+    ") + 0"
+  ],
+  "formatString": "0",
+  "lineageTag": "c1c4daa6-19fb-4cf0-86b0-294c7c800f02",
+  "summarizeBy": "sum",
+  "annotations": [
+    {
+      "name": "SummarizationSetBy",
+      "value": "Automatic"
+    }
+  ]
+}

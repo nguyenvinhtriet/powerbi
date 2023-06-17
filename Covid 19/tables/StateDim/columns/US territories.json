@@ -1,0 +1,13 @@
+{
+  "name": "US territories",
+  "dataType": "string",
+  "sourceColumn": "US territories",
+  "lineageTag": "d6fc91a9-5957-4c80-a933-44e3da9eea13",
+  "summarizeBy": "none",
+  "annotations": [
+    {
+      "name": "SummarizationSetBy",
+      "value": "Automatic"
+    }
+  ]
+}

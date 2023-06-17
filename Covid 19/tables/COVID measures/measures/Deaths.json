@@ -1,0 +1,6 @@
+{
+  "name": "Deaths",
+  "expression": "SUM('COVID'[Deaths])",
+  "formatString": "#,0",
+  "lineageTag": "2499066e-4818-4561-b3be-eb27dd9f4a48"
+}

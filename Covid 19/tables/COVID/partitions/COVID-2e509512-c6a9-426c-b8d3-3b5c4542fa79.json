@@ -1,0 +1,33 @@
+{
+  "name": "COVID-2e509512-c6a9-426c-b8d3-3b5c4542fa79",
+  "mode": "import",
+  "source": {
+    "type": "m",
+    "expression": [
+      "let",
+      "  #\"Date Range\" = Calendar_Raw,",
+      "  #\"Added Custom Column\" = Table.AddColumn(#\"Date Range\", \"Report\", each Text.Combine({",
+      "    Date.ToText([Calendar Date], \"MM\"), ",
+      "    \"-\", ",
+      "    Date.ToText([Calendar Date], \"dd\"), ",
+      "    \"-\", ",
+      "    Date.ToText([Calendar Date], \"yyyy\"), ",
+      "    \".csv\"",
+      "  }), type text),",
+      "  #\"Invoked Custom Function\" = Table.AddColumn(",
+      "    #\"Added Custom Column\", ",
+      "    \"fxGetReportDetails\", ",
+      "    each fxGetReportDetails([Report])",
+      "  ),",
+      "  #\"Removed Columns\" = Table.RemoveColumns(#\"Invoked Custom Function\", {\"Report\"}),",
+      "  #\"Removed Errors\" = Table.RemoveRowsWithErrors(#\"Removed Columns\", {\"fxGetReportDetails\"}),",
+      "  #\"Expanded fxGetReportDetails\" = Table.ExpandTableColumn(#\"Removed Errors\", \"fxGetReportDetails\", {\"FIPS\", \"Confirmed\", \"Deaths\"}, {\"FIPS\", \"Confirmed\", \"Deaths\"}),",
+      "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Expanded fxGetReportDetails\",{{\"Calendar Date\", type date}, {\"FIPS\",type text}, {\"Confirmed\", Int64.Type}, {\"Deaths\", Int64.Type}}),",
+      "    #\"Renamed Columns\" = Table.RenameColumns(#\"Changed Type\",{{\"Confirmed\", \"Cases\"}, {\"Calendar Date\", \"Date\"}}),",
+      "    #\"Merged Queries\" = Table.NestedJoin(#\"Renamed Columns\", {\"FIPS\"}, #\"US Counties\", {\"FIPS\"}, \"US Counties\", JoinKind.Inner),",
+      "    #\"Expanded US Counties\" = Table.ExpandTableColumn(#\"Merged Queries\", \"US Counties\", {\"County Name\", \"StateFIPS\"}, {\"County Name\", \"StateFIPS\"})",
+      "in",
+      "    #\"Expanded US Counties\""
+    ]
+  }
+}

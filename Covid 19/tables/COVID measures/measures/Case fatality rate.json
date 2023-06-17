@@ -1,0 +1,9 @@
+{
+  "name": "Case fatality rate",
+  "expression": [
+    "DIVIDE([Total deaths],[Total confirmed cases])",
+    ""
+  ],
+  "formatString": "0.0%;-0.0%;0.0%",
+  "lineageTag": "59d2daf3-66b3-4755-b391-1d0b7a821c9e"
+}

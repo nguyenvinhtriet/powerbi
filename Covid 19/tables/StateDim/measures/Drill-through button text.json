@@ -1,0 +1,5 @@
+{
+  "name": "Drill-through button text",
+  "expression": "IF(SELECTEDVALUE(StateDim[State],0)==0,\"Click on a State to view by County  \", \"Click here to view by County in \" & VALUES(StateDim[State code]) &\"  \")",
+  "lineageTag": "53ba7676-26b1-4a16-be2d-228a29515392"
+}

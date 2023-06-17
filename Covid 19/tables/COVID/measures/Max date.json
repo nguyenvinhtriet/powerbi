@@ -1,0 +1,7 @@
+{
+  "name": "Max date",
+  "expression": "CALCULATE(MAX('COVID'[Date]),ALL('COVID'))",
+  "formatString": "General Date",
+  "isHidden": true,
+  "lineageTag": "91921841-1a89-445e-913c-f510c38840b7"
+}

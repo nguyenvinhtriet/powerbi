@@ -1,0 +1,32 @@
+{
+  "type": "calculated",
+  "name": "Daily cases",
+  "dataType": "int64",
+  "isDataTypeInferred": true,
+  "expression": [
+    "",
+    "VAR __CountyName = 'COVID'[County Name]",
+    "VAR __State = 'COVID'[StateFIPS]",
+    "VAR __Yesterday =  DATEADD(COVID[Date],-1,DAY)",
+    "VAR __TodaysCases = 'COVID'[Cases]",
+    "",
+    "RETURN  __TodaysCases - CALCULATE(",
+    "    SUM('COVID'[Cases]) , ",
+    "    FILTER(",
+    "        COVID, ",
+    "        COVID[Date] = __Yesterday &&",
+    "        COVID[County Name] = __CountyName &&",
+    "        COVID[StateFIPS] = __State",
+    "    )",
+    ") + 0"
+  ],
+  "formatString": "#,0",
+  "lineageTag": "3c76fd35-d104-4568-a162-a19dd8b49769",
+  "summarizeBy": "sum",
+  "annotations": [
+    {
+      "name": "SummarizationSetBy",
+      "value": "Automatic"
+    }
+  ]
+}

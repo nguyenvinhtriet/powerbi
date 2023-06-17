@@ -1,0 +1,20 @@
+{
+  "name": "Order",
+  "dataType": "int64",
+  "isHidden": true,
+  "sourceColumn": "Order",
+  "formatString": "0",
+  "lineageTag": "8e211fb9-5c22-44c9-b649-e2e612d72c7e",
+  "summarizeBy": "sum",
+  "changedProperties": [
+    {
+      "property": "IsHidden"
+    }
+  ],
+  "annotations": [
+    {
+      "name": "SummarizationSetBy",
+      "value": "Automatic"
+    }
+  ]
+}

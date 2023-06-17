@@ -1,0 +1,16 @@
+{
+  "type": "calculated",
+  "name": "County",
+  "dataType": "string",
+  "isDataTypeInferred": true,
+  "expression": "'COVID'[County Name] & \", \" & RELATED('StateDim'[State])",
+  "lineageTag": "35e04fd9-50d7-4b81-8c21-8ac5bf177a69",
+  "dataCategory": "County",
+  "summarizeBy": "none",
+  "annotations": [
+    {
+      "name": "SummarizationSetBy",
+      "value": "Automatic"
+    }
+  ]
+}

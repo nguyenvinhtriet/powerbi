@@ -1,0 +1,56 @@
+{
+  "name": "fxCountryCorrections",
+  "kind": "m",
+  "expression": [
+    "let",
+    "    Source = (#\"Input Value\" as text, Like as logical) as any =>",
+    "let",
+    "    Values = {",
+    "                {\"Aus\",\"Australia\"},",
+    "                {\"Palestin\", \"Palestine\"},",
+    "                {\"Macao\", \"Macau\"},",
+    "                {\"Congo\",\"Republic of the Congo\"},",
+    "                {\"Taiwan\", \"Taiwan\"},",
+    "                {\"Verde\",\"Cabo Verde\"},",
+    "                {\"Hong Kong\",\"Hong Kong\"},",
+    "                {\"Iran\",\"Iran\"},",
+    "                {\"China\",\"China\"},",
+    "                {\"Moldova\",\"Moldova\"},",
+    "                {\"Bahamas\",\"Bahamas\"},",
+    "                {\"Gambia\",\"Gambia\"},",
+    "                {\"UK\",\"United Kingdom\"},",
+    "                {\"US\",\"United States\"},",
+    "                {\"Viet Nam\",\"Vietnam\"},",
+    "                {\"South\",\"South Korea\"},",
+    "                {\"Czech\",\"Czech Republic\"},",
+    "                {\"Ship\", null},",
+    "                {\"Princess\", null},",
+    "                {\"The\", null}",
+    "    },",
+    "    SWITCH = List.First(",
+    "        List.Select(",
+    "            Values, ",
+    "            each if Like ",
+    "                    then Text.Contains(#\"Input Value\", _{0}, Comparer.OrdinalIgnoreCase) ",
+    "                    else _{0} = #\"Input Value\"",
+    "        )",
+    "    ){1}?,",
+    "    Result = if SWITCH = null then #\"Input Value\" else SWITCH",
+    "in",
+    "    Result",
+    "in",
+    "    Source"
+  ],
+  "queryGroup": "Functions and Parameters",
+  "lineageTag": "cea92db3-3cc0-47b1-a764-01dc7349e156",
+  "annotations": [
+    {
+      "name": "PBI_NavigationStepName",
+      "value": "Navigation"
+    },
+    {
+      "name": "PBI_ResultType",
+      "value": "Function"
+    }
+  ]
+}

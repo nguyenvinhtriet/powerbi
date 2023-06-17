@@ -1,0 +1,19 @@
+{
+  "name": "Metric",
+  "dataType": "string",
+  "isHidden": true,
+  "sourceColumn": "Metric",
+  "lineageTag": "b1375403-c121-4667-b42d-b3e6c7376026",
+  "summarizeBy": "none",
+  "changedProperties": [
+    {
+      "property": "IsHidden"
+    }
+  ],
+  "annotations": [
+    {
+      "name": "SummarizationSetBy",
+      "value": "Automatic"
+    }
+  ]
+}

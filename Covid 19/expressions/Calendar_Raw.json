@@ -1,0 +1,28 @@
+{
+  "name": "Calendar_Raw",
+  "kind": "m",
+  "expression": [
+    "let",
+    "  firstDate = #\"Start Date\",",
+    "  todaysDate = Date.From(DateTime.LocalNow()),",
+    "  totalDays = Duration.Days(todaysDate - firstDate) + 1,",
+    "  ListOfDates = List.Dates(firstDate, totalDays, #duration(1, 0, 0, 0)),",
+    "  #\"Date Range\" = Table.FromList(ListOfDates, Splitter.SplitByNothing(), type table[",
+    "    #\"Calendar Date\" = date",
+    "  ])",
+    "in",
+    "  #\"Date Range\""
+  ],
+  "queryGroup": "Data References",
+  "lineageTag": "311ba2ad-a758-4088-b91b-080d5788cde2",
+  "annotations": [
+    {
+      "name": "PBI_NavigationStepName",
+      "value": "Navigation"
+    },
+    {
+      "name": "PBI_ResultType",
+      "value": "Table"
+    }
+  ]
+}

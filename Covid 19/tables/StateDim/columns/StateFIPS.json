@@ -1,0 +1,13 @@
+{
+  "name": "StateFIPS",
+  "dataType": "string",
+  "sourceColumn": "StateFIPS",
+  "lineageTag": "793e78d3-e98a-4194-84fc-3c11b94894b6",
+  "summarizeBy": "none",
+  "annotations": [
+    {
+      "name": "SummarizationSetBy",
+      "value": "Automatic"
+    }
+  ]
+}

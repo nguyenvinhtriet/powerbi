@@ -1,0 +1,39 @@
+{
+  "name": "fxGetReportDetails",
+  "kind": "m",
+  "expression": [
+    "let",
+    "    Source = (reportDate as text) as table => let",
+    "  Source = Csv.Document(Web.Contents(\"https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_daily_reports\", [RelativePath = reportDate]), [",
+    "    Delimiter = \",\", ",
+    "    Encoding = 65001, ",
+    "    QuoteStyle = QuoteStyle.None",
+    "  ]),",
+    "  #\"Promoted Headers\" = Table.PromoteHeaders(Source),",
+    "  #\"Clean: Underscores\" = Table.TransformColumnNames(#\"Promoted Headers\", each Text.Trim(",
+    "    Replacer.ReplaceText(Replacer.ReplaceText(_, \"/\", \"_\"), \"_\", \" \")",
+    "  )),",
+    "  #\"Clean: Lat/Long Fields\" = Table.TransformColumnNames(",
+    "    #\"Clean: Underscores\", ",
+    "    each if List.Contains({\"Lat\", \"Long\"}, _) then _ & \"itude\" else _",
+    "  ),",
+    "    #\"US Only\" = Table.SelectRows(#\"Clean: Lat/Long Fields\", each [Country Region] = \"US\"),",
+    "    #\"FIPS Codes\" = Table.TransformColumns(#\"US Only\", {\"FIPS\", each Text.PadStart( _ , 5, \"0\" ) } )",
+    "in",
+    "    #\"FIPS Codes\"",
+    "in",
+    "    Source"
+  ],
+  "queryGroup": "Functions and Parameters",
+  "lineageTag": "8309daac-b273-42cc-b30b-5c92847baecc",
+  "annotations": [
+    {
+      "name": "PBI_NavigationStepName",
+      "value": "Navigation"
+    },
+    {
+      "name": "PBI_ResultType",
+      "value": "Function"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "name": "COVID measures",
+  "lineageTag": "9f681416-7364-466e-8d62-c4b5606c65be",
+  "annotations": [
+    {
+      "name": "PBI_ResultType",
+      "value": "Table"
+    },
+    {
+      "name": "TabularEditor_Relationships",
+      "value": "[]"
+    }
+  ]
+}

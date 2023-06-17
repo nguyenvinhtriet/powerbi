@@ -1,0 +1,14 @@
+{
+  "name": "StateDim",
+  "lineageTag": "2151a01d-b81d-4eaf-823a-87e191f6b6eb",
+  "annotations": [
+    {
+      "name": "PBI_ResultType",
+      "value": "Table"
+    },
+    {
+      "name": "TabularEditor_Relationships",
+      "value": "[]"
+    }
+  ]
+}

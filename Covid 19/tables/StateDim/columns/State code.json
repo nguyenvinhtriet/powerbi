@@ -1,0 +1,13 @@
+{
+  "name": "State code",
+  "dataType": "string",
+  "sourceColumn": "State code",
+  "lineageTag": "b795d7f1-13d4-416b-b315-7cbcacd8ec2e",
+  "summarizeBy": "none",
+  "annotations": [
+    {
+      "name": "SummarizationSetBy",
+      "value": "Automatic"
+    }
+  ]
+}

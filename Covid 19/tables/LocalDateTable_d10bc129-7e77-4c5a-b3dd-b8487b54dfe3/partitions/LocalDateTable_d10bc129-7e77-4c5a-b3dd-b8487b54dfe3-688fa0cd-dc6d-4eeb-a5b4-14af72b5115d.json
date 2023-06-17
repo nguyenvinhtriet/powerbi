@@ -1,0 +1,8 @@
+{
+  "name": "LocalDateTable_d10bc129-7e77-4c5a-b3dd-b8487b54dfe3-688fa0cd-dc6d-4eeb-a5b4-14af72b5115d",
+  "mode": "import",
+  "source": {
+    "type": "calculated",
+    "expression": "Calendar(Date(Year(MIN('COVID'[Date])), 1, 1), Date(Year(MAX('COVID'[Date])), 12, 31))"
+  }
+}

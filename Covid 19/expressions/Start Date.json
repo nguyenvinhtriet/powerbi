@@ -1,0 +1,13 @@
+{
+  "name": "Start Date",
+  "kind": "m",
+  "expression": "#date(2020, 3, 22) meta [IsParameterQuery=true, Type=\"Date\", IsParameterQueryRequired=true]",
+  "queryGroup": "Functions and Parameters",
+  "lineageTag": "8e3a1c55-4ec4-4816-b769-783e62c6e567",
+  "annotations": [
+    {
+      "name": "PBI_ResultType",
+      "value": "Date"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "name": "Terms of use",
+  "expression": "\"This report and data are provided \" & \"\"\"\" & \"as is\" & \"\"\"\" & \", \" & \"\"\"\" & \"with all faults\" & \"\"\"\" & \", and without warranty of any kind. Microsoft gives no express warranties or guarantees and expressly disclaims all implied warranties, including merchantability, fitness for a particular purpose, and non-infringement.\"",
+  "isHidden": true,
+  "lineageTag": "dc3cb1f4-fa1b-4bd3-bdf6-fbd87b39fb3b",
+  "changedProperties": [
+    {
+      "property": "IsHidden"
+    }
+  ]
+}

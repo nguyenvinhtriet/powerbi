@@ -1,0 +1,16 @@
+{
+  "type": "calculated",
+  "name": "Country",
+  "dataType": "string",
+  "isDataTypeInferred": true,
+  "isHidden": true,
+  "expression": "\"USA\"",
+  "lineageTag": "f9ceff65-6635-4bc7-953c-381796557651",
+  "summarizeBy": "none",
+  "annotations": [
+    {
+      "name": "SummarizationSetBy",
+      "value": "Automatic"
+    }
+  ]
+}

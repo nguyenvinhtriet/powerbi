@@ -1,0 +1,15 @@
+{
+  "name": "Methodology",
+  "expression": [
+    "\"This interactive feature aggregates data from the Johns Hopkins Center for Systems Science and Engineering (CSSE), state- and local-level public health agencies. County-level data is confirmed by referencing state and local agencies directly.",
+    "",
+    "Source: John Hopkins Center for Systems Science and Engineering (CSSE)\""
+  ],
+  "isHidden": true,
+  "lineageTag": "e8659ba1-98d7-47f0-ac8d-47b49843bada",
+  "changedProperties": [
+    {
+      "property": "IsHidden"
+    }
+  ]
+}
