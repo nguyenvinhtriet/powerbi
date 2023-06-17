@@ -21,6 +21,7 @@
     ") + 0"
   ],
   "formatString": "#,0",
+  "displayFolder": "Attributes",
   "lineageTag": "3c76fd35-d104-4568-a162-a19dd8b49769",
   "summarizeBy": "sum",
   "annotations": [

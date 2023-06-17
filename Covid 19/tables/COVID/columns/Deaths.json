@@ -3,6 +3,7 @@
   "dataType": "int64",
   "sourceColumn": "Deaths",
   "formatString": "0",
+  "displayFolder": "Attributes",
   "lineageTag": "e4b6b2fd-1197-49c3-acd9-86d76d77dfda",
   "summarizeBy": "sum",
   "annotations": [

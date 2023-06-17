@@ -2,6 +2,7 @@
   "name": "County Name",
   "dataType": "string",
   "sourceColumn": "County Name",
+  "displayFolder": "Attributes",
   "lineageTag": "73278cdd-5af8-4327-a50b-317152db0a12",
   "summarizeBy": "none",
   "annotations": [

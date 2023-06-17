@@ -2,6 +2,7 @@
   "name": "FIPS",
   "dataType": "string",
   "sourceColumn": "FIPS",
+  "displayFolder": "Attributes",
   "lineageTag": "a0a505be-6fdb-4b95-8895-a06c68778f69",
   "summarizeBy": "none",
   "annotations": [

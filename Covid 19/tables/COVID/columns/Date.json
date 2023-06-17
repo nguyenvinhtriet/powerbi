@@ -3,6 +3,7 @@
   "dataType": "dateTime",
   "sourceColumn": "Date",
   "formatString": "Long Date",
+  "displayFolder": "Attributes",
   "lineageTag": "07f0e4d6-2ee0-42ba-9f6d-b43c5a359119",
   "summarizeBy": "none",
   "variations": [
