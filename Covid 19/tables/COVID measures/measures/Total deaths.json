@@ -2,5 +2,6 @@
   "name": "Total deaths",
   "expression": "SUM(COVID[Daily deaths])",
   "formatString": "#,0",
+  "displayFolder": "Common Measures",
   "lineageTag": "2f0fb5e8-8f60-463a-aac6-902e21b5e422"
 }

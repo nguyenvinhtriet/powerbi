@@ -4,6 +4,7 @@
   "dataType": "string",
   "isDataTypeInferred": true,
   "expression": "'COVID'[County Name] & \", \" & RELATED('StateDim'[State])",
+  "displayFolder": "Attributes",
   "lineageTag": "35e04fd9-50d7-4b81-8c21-8ac5bf177a69",
   "dataCategory": "County",
   "summarizeBy": "none",
